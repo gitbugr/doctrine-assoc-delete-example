@@ -1,0 +1,13 @@
+{
+    "name": "test/broken-doctrine",
+    "autoload": {
+        "psr-4": {
+            "Test\\": "src/"
+        }
+    },
+    "require": {
+        "doctrine/orm": "^2.19.5",
+        "symfony/var-dumper": "^7.1",
+        "symfony/cache": "^7.1"
+    }
+}
