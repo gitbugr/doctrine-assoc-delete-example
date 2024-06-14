@@ -16,27 +16,18 @@
         $userA = new UserA();
         $userB = new UserB();
 
-        $thingA1 = new ThingA();
-        $thingA2 = new ThingA();
-        $thingA3 = new ThingA();
-        $thingA4 = new ThingA();
+        $thingA = new ThingA();
         $thingB = new ThingB();
 
-        $thingA1->setOwner($userA);
-        $thingA2->setOwner($userA);
-        $thingA3->setOwner($userA);
-        $thingA4->setOwner($userA);
-        $userA->setThings(new ArrayCollection([$thingA1, $thingA2, $thingA3, $thingA4]));
+        $thingA->setOwner($userA);
+        $userA->setThings(new ArrayCollection([$thingA]));
 
         $thingB->setOwner($userB);
         $userB->setThings(new ArrayCollection([$thingB]));
 
         $em->persist($userA);
         $em->persist($userB);
-        $em->persist($thingA1);
-        $em->persist($thingA2);
-        $em->persist($thingA3);
-        $em->persist($thingA4);
+        $em->persist($thingA);
         $em->persist($thingB);
         $em->flush();
 
